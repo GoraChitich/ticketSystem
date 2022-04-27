@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.sass']
 })
 export class HeaderComponent implements OnInit {
+  isAdminMode = true;
 
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

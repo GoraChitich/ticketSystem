@@ -1,1 +1,33 @@
-<p>header works!</p>
+<div *ngIf="isAdminMode">
+  <!--for admin and support users-->
+
+  <button mat-button [matMenuTriggerFor]="ticketMenu">Tickets</button>
+  <mat-menu #ticketMenu yPosition="above">
+    <button mat-menu-item>New ticket</button>
+    <button mat-menu-item>List tickets</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="userMenu">Users</button>
+  <mat-menu #userMenu yPosition="above">
+    <button mat-menu-item>New user</button>
+    <button mat-menu-item>List users</button>
+  </mat-menu>
+
+  <button mat-button [matMenuTriggerFor]="companiesMenu">Companies</button>
+  <mat-menu #companiesMenu yPosition="above">
+    <button mat-menu-item>New company</button>
+    <button mat-menu-item>List companies</button>
+  </mat-menu>
+
+  <button mat-button>Dashboard</button>
+  <button mat-button>my settings</button>
+  <button mat-button>System settings</button>
+  <button mat-button>About</button>
+</div>
+
+<div *ngIf="!isAdminMode">
+  <button mat-button>Tickets</button>
+  <button mat-button>Dashboard</button>
+  <button mat-button>Settings</button>
+  <button mat-button>About</button>
+</div>
